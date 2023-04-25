@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Taschenrechner</title>
+</head>
+
+<body>
+    <script>
+        var korrekt = false;
+var zufall = Math.ceil(Math.random()*101);
+
+count=0; 
+while(korrekt === false && count <=10){
+	var zahl = prompt('Rate eine zahl zwischen 1 und 100:');
+	if(zahl == zufall)korrekt = true;
+	else if(zahl > zufall)alert('Zahl zu gross, versuche es nochmal!')
+	else if(zahl < zufall)alert('Zahl zu klein, versuche es nochmal!')
+	else alert('Ungueltige Eingabe, nur Zahlen zwischen 1-100!')
+    count=count+1;
+}
+alert('Richtig!, die Zahl war ' + zufall);
+
+    </script>
+</body>
+
+</html>
